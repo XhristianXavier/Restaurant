@@ -1,3 +1,5 @@
+
+
 *{
     margin:0;
     padding:0;
@@ -14,115 +16,17 @@ body{
     margin:0 auto;
 }
 //Header
-.header{
-    color:#f2f2f2;
-    font-weight:500;
-    font-size:.9rem;
-    padding:1.2rem 0;
-    background-color:rgb(170, 132, 83);
-    @media screen and (max-width:768px){
-    background-color:#fff;
-    }
-    .container{
-        visibility:visible;
-        justify-content: space-between;
-        .info-about{
-            display:flex;
-            gap:2.5rem;
-        }
-    @media screen and (max-width:768px){
-       display:none;
-    }
-    }
-    .container-small{
-        display:none;
-        width:90%;
-        max-width:1150px;
-        margin:0 auto;
-        justify-content: space-between;
-        align-items:center;
-        .logo{
-            font-family: 'Pacifico';
-            color:#000;
-            font-size:1.4rem;
-        }
-        .burguer-menu{
-            a{
-                img{
-                    width:20px;
-                }
-            }
-        }
-    @media screen and (max-width:768px){
-        display:flex;
-    }
-    }
-    .sociales{
-        ul{
-            list-style: none;
-            display:flex;
-           a{
-            text-decoration:none;
-            color:#fff;
-            font-size:1.2rem;
-           }
-           li{
-               padding-left:1rem;
-           }
-        }
-    }
-    .menu-header{
-        position: fixed;
-        z-index: 20;
-        background-color:rgb(44, 44, 44);
-        width: 250px;
-        height: 100vh;
-        top: 0;
-        transform:translateX(-100%);
-        transition: transform .5s ease;
-        a{
-            display:block;
-            text-decoration:none;
-            color:#fff;
-            padding:.8rem 1.2rem;
-        }
-        .close-menu-header{
-            font-size:1.2rem;
-            font-weight:600;
-            text-align:right;
-        }
-        // @media screen and (max-width:768px){
-        //     display:block;
-        // }
-    }
-    .menu-header-active{
-        transform:translateX(0%);
-
-    }
-    .layer-menu{
-        position: fixed;
-        background-color: black;
-        opacity: .4;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 20;
-        display:none;
-    }
-    .layer-menu-active{
-        display:block;
-    }
-}
+@import "header";
 //banner
 .banner{
     background-image:url('../images/banner.jpg');
-    height:95vh;
+    height:50rem;
     background-repeat:no-repeat;
     background-size:cover;
     background-position:50% 80%;
     position:relative;
     .container-banner{
+        z-index:20;
         width:90%;
         max-width:1150px;
         display:flex;
@@ -171,7 +75,8 @@ body{
         }
     }
     .container-reservation-banner{
-        top: 40%;
+        z-index:20;
+        top: 35%;
         position: absolute;
         right: 50%;
         transform: translate(50%, 0%);
@@ -212,8 +117,16 @@ body{
 // @media screen and (max-width:768px){
 //     height:100vh;
 // }
-@media screen and (max-width:1024px){
-    height:100vh;
+// @media screen and (max-width:1024px){
+//     height:55rem;
+// }
+.layer-banner{
+    z-index:10;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .5;
+    background-color: #000;
 }
 }
 //Story
@@ -269,57 +182,56 @@ body{
     }
 }
 // Food
-.container-food{
-    display:flex;
-    margin:0 auto;
-    width:100%;
-    flex-wrap:wrap;
-    .box-food{
-        position:relative;
-        width:25%;
-        img{
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            display:block;
+.food{
+    .container-food{
+        display:flex;
+        margin:0 auto;
+        width:100%;
+        flex-wrap:wrap;
+        .box-food{
+            position:relative;
+            width:25%;
+            img{
+                width: 100%;
+                height: 350px;
+                object-fit: cover;
+                display:block;
+            }    
         }
-        &:after{
+        .title-food{
+            position: absolute;
+            font-size: 2rem;
+            top: 40%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            color: #fff;
+            font-weight: 500;
+            z-index:10;
+        }
+        .layer-box-food{
             background: gray;
             width: 100%;
             height: 100%;
             content: '';
-            display: block;
             position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            opacity: .2;
+            opacity: .4;
+            &:hover{
+                background: rgb(44, 44, 44);  
+            }
         }
-
-    }
-    .title-food{
-        position: absolute;
-        font-size: 2rem;
-        top: 40%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        color: #fff;
-        font-weight: 500;
-        z-index:10;
-    }
-    @media screen and (max-width: 1024px){
-        .box-food{
-            width:50%;
+        @media screen and (max-width: 1024px){
+            .box-food{
+                width:50%;
+            }
         }
-    }
-    @media screen and (max-width:768px){
-        flex-direction:column;
-        gap:25px;
-        .box-food{
-            width:100%;
-            img{
-                height:auto;
+        @media screen and (max-width:768px){
+            flex-direction:column;
+            gap:25px;
+            .box-food{
+                width:100%;
+                img{
+                    height:auto;
+                }
             }
         }
     }
@@ -634,130 +546,4 @@ body{
     }
 }
 //footer
-.footer{
-background-color:#3A424E;
-.container{
-    padding: 3.5rem 0;
-    gap:1.5rem;
-    flex-wrap:wrap;
-    .info-footer,.posts-footer,.gallery-footer,.contact-info-footer{
-        flex:0 0 calc(25% - 1.5rem);
-        @media screen and (max-width:1024px){
-        flex:0 0 calc(50% - 1.5rem);
-            
-        }
-        @media screen and (max-width:768px){
-            flex:0 0 100%;  
-        }
-    }
-    .info-footer{
-        display:flex;
-        flex-direction:column;
-        .logo-footer{
-            font-family: 'Pacifico';
-            color:#EFEFEF;
-            font-size:1.4rem;
-            text-shadow: 6px 5px 5px rgba(0,0,0,0.79);
-            margin-bottom:2rem;
-            height:2.5rem;
-        }
-        .description-footer{
-            margin-bottom:3.5rem;
-            p{
-                color:#EFEFEF;
-                line-height:1.5;
-            }
-        }
-        .social-media-footer{
-            .sociales{
-                ul{
-                    list-style: none;
-                    display:flex;
-                   a{
-                    text-decoration:none;
-                    color:gray;
-                    font-size:1.2rem;
-                   }
-                   li{
-                       padding-left:1rem;
-                   }
-                }
-            }
-        }
-    }
-    .posts-footer{
-        display:flex;
-        flex-direction:column;
-        .title-post{
-            font-size: 1.4rem;
-            margin-bottom:2rem;
-            color:#EFEFEF;
-            height:2.5rem;
-        }
-        .post-footer{
-            padding: .8rem 0;
-            border-bottom: 1px solid #585858;
-            a{
-                text-decoration:none;
-                color:gray;
-            }
-        }
-        .first-post{
-            padding-top:0;
-        }
-    }
-    .gallery-footer{
-        .title-gallery{
-            font-size: 1.4rem;
-            color:#EFEFEF;
-            margin-bottom:2rem;
-            height:2.5rem;
-        }
-        .container-gallery{
-            display:flex;
-            flex-wrap:wrap;
-            .box-gallery{
-                width:33.3%;
-                img{
-                    width: 100%;
-                    height: 100%;
-                    display: block;
-                    object-fit:cover;
-                }
-            @media screen and (max-width:768px){
-                width:100%;
-            }
-            } 
-        }
-    }
-    .contact-info-footer{
-        display:flex;
-        flex-direction:column;
-        .title-contact-footer{
-            font-size: 1.4rem;
-            color:#EFEFEF;
-            margin-bottom:2rem;
-            height:2.5rem;
-        }
-        .direction-footer,
-        .number-footer,
-        .email-footer,
-        .lunch,
-        .first-dinner,
-        .second-dinner{
-            margin-bottom:1rem;
-            color:#EFEFEF;
-        }
-    }
-}
-.copyright{
-    border-top:1px solid #585858;
-    padding: 1.5rem 0;
-    text-align:center;
-    color:gray;
-    font-weight:400;
-    span{
-        color:#EFEFEF;
-    }
-}
-}
+@import "footer";

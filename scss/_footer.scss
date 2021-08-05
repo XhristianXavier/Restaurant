@@ -1,0 +1,127 @@
+.footer{
+    background-color:#3A424E;
+    .container{
+        padding: 3.5rem 0;
+        gap:1.5rem;
+        flex-wrap:wrap;
+        .info-footer,.posts-footer,.gallery-footer,.contact-info-footer{
+            flex:0 0 calc(25% - 1.5rem);
+            @media screen and (max-width:1024px){
+            flex:0 0 calc(50% - 1.5rem);
+                
+            }
+            @media screen and (max-width:768px){
+                flex:0 0 100%;  
+            }
+        }
+        .info-footer{
+            display:flex;
+            flex-direction:column;
+            .logo-footer{
+                font-family: 'Pacifico';
+                color:#EFEFEF;
+                font-size:1.4rem;
+                text-shadow: 6px 5px 5px rgba(0,0,0,0.79);
+                margin-bottom:2rem;
+                height:2.5rem;
+            }
+            .description-footer{
+                margin-bottom:3.5rem;
+                p{
+                    color:#EFEFEF;
+                    line-height:1.5;
+                }
+            }
+            .social-media-footer{
+                .sociales{
+                    ul{
+                        list-style: none;
+                        display:flex;
+                       a{
+                        text-decoration:none;
+                        color:gray;
+                        font-size:1.2rem;
+                       }
+                       li{
+                           padding-left:1rem;
+                       }
+                    }
+                }
+            }
+        }
+        .posts-footer{
+            display:flex;
+            flex-direction:column;
+            .title-post{
+                font-size: 1.4rem;
+                margin-bottom:2rem;
+                color:#EFEFEF;
+                height:2.5rem;
+            }
+            .post-footer{
+                padding: .8rem 0;
+                border-bottom: 1px solid #585858;
+                a{
+                    text-decoration:none;
+                    color:gray;
+                }
+            }
+            .first-post{
+                padding-top:0;
+            }
+        }
+        .gallery-footer{
+            .title-gallery{
+                font-size: 1.4rem;
+                color:#EFEFEF;
+                margin-bottom:2rem;
+                height:2.5rem;
+            }
+            .container-gallery{
+                display:flex;
+                flex-wrap:wrap;
+                .box-gallery{
+                    width:33.3%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        object-fit:cover;
+                    }
+                @media screen and (max-width:768px){
+                    width:100%;
+                }
+                } 
+            }
+        }
+        .contact-info-footer{
+            display:flex;
+            flex-direction:column;
+            .title-contact-footer{
+                font-size: 1.4rem;
+                color:#EFEFEF;
+                margin-bottom:2rem;
+                height:2.5rem;
+            }
+            .direction-footer,
+            .number-footer,
+            .email-footer,
+            .lunch,
+            .first-dinner,
+            .second-dinner{
+                margin-bottom:1rem;
+                color:#EFEFEF;
+            }
+        }
+    }
+    .copyright{
+        border-top:1px solid #585858;
+        padding: 1.5rem 0;
+        text-align:center;
+        color:gray;
+        font-weight:400;
+        span{
+            color:#EFEFEF;
+        }
+    }
+    }

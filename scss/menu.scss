@@ -1,0 +1,291 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Roboto',sans-serif;
+    background-color:#f3f3f3;
+}
+.container{
+    display:flex;       
+    width:90%;
+    max-width:1150px;
+    margin:0 auto;
+}
+
+//Header
+@import "header";
+.menu-header{
+    background-color: #fff;
+    padding: 2.5rem 0;
+    .container-menu-header{
+        width: 90%;
+        max-width: 1150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        .logo{
+            font-family: 'Pacifico';
+            color:#000;
+            font-size:1.4rem;
+        }
+        @media screen and (max-width:768px){
+            display:none;
+        }
+    }
+    .menu{
+        ul{
+            list-style-type: none;
+            display:flex;
+            li{
+                font-size:1.2rem;
+                a{
+                    padding:.8rem 1rem;
+                    color:gray;
+                    font-weight:400;
+                    text-decoration:none;
+                }
+                &:last-child{
+                    a{
+                        padding:.8rem 2.5rem;
+                        background-color:rgb(47, 47, 47);
+                        color:#fff;
+                        &:hover{
+                            background-color:rgb(88, 88, 88);
+                            color:#fff; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//banner
+.banner{
+    background-image:url('../images/menu-banner.jpeg');
+    height:25rem;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+    background-position: 50% 50%;
+    .container-reservation-banner{
+        top: 25%;
+        position: absolute;
+        right: 50%;
+        transform: translate(50%, 0%);
+        text-align:center;
+        color:#fff;
+        width:35rem;
+        h1{
+            font-size:4.5rem;
+        }
+        .menu-banner{
+            font-size:3.5rem;
+            font-weight:400;
+        }
+        .description-menu-banner{
+            margin-top :2rem;
+            color:#fff;
+            line-height:1.5;
+            font-weight:400;
+
+        } 
+    @media screen and (max-width:768px){
+        top:20%;
+        h1{
+            font-size:3.5rem;
+        }
+        p{
+            font-size:1rem;
+            font-weight:600;
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    height:100vh;
+}
+.layer-banner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .5;
+    background-color: #000;
+}
+}
+
+//Our menu
+.our-menu{
+    background-color:#fff;
+    padding-top:5.5rem;
+    padding-bottom:5.5rem;
+    .container-our-menu{
+        display:flex;
+        flex-direction:column;
+        width:90%;
+        max-width:1150px;
+        margin:0 auto;
+        text-align:center;
+    @media screen and (max-width:768px){
+        width:90%;
+    }
+    }   
+    .list-our-menu{
+        display: flex;
+        gap: 2.5rem;
+        justify-content:center;
+        flex-wrap:wrap;
+        .item-our-menu{
+            flex: 0 0 calc(33.3% - 2.5rem);
+        }
+    } 
+    .desc-item-our-menu{
+        font-size:1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid lightgray;
+    }
+    .icon-item-our-menu{
+        margin-bottom:1rem;
+        .container-icon-menu{
+            display: inline-block;
+            border-radius: 100%;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            img{
+                transform: translate(50%,-50%);
+                position: absolute;
+                top: 50%;
+                right: 50%;
+            }
+        &.starter{
+            background-color: rgb(83, 168, 83);
+        }
+        &.lunch{
+            background-color:rgb(180, 149, 93);
+        }
+        &.dinner{
+            background-color:rgb(172, 102, 172);
+        }
+        &.dessert{
+            background-color:rgb(201, 83, 103);
+        }
+        &.cocktail{
+            background-color:rgb(47, 47, 141);
+        }
+        &.drink{
+            background-color:rgb(46, 181, 226);
+        }
+        }
+    }
+    .foods-item-our-menu{
+        padding-top:1.5rem;
+        .food-item-our-menu{
+            text-align:initial;
+            margin-bottom:2rem;
+            .plate{
+                display:flex;
+                justify-content:space-between;
+                margin-bottom:.8rem;
+                .name,.price{
+                    font-weight:600;
+                    font-size:1.1rem;
+                }
+
+            }
+            .desc{
+                color:gray;
+                font-size:.9rem;
+            }
+            .new,.promotion{
+                padding:.2rem .9rem;
+                background-color:#D9A868;
+                color:#fff;
+                display:inline-block;
+                font-size:.7rem;
+                font-weight:600;
+                border-radius:2px;
+                margin-top:.5rem;
+            }
+        }
+    }
+
+}
+//Reservation
+.reservation{
+    margin-top:5rem;
+    margin-bottom: 5rem;
+}
+.container-reservation{
+    max-width:1150px;
+    width:70%;
+    margin:0 auto;
+    .container-text-reservation{
+        width:60%;
+        margin:0 auto;
+        .text-reservation{
+            font-family:'Pacifico',sans-serif;
+            font-size:1.8rem;
+            margin-bottom:1rem;
+            color:#D9A868;
+        }
+        .title-reservation{
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+        }
+        .text-reservation,
+        .title-reservation,
+        .description-reservation{
+            text-align:center;
+        }
+        .description-reservation{
+            color:gray;
+            line-height:1.5;
+            margin-bottom:2.5rem;
+        }
+        @media screen and (max-width:768px){
+            width:90%;
+        }
+    }
+    .form-reservation{
+        background-color: #fff;
+        padding: 2.5rem;
+        .row-form{
+            display:flex;
+            gap:2rem;
+            margin-bottom:2rem;
+            flex-wrap:wrap;
+            .field{
+                flex:1 0 auto;
+                input[type="text"]{
+                    width:100%;
+                    outline:none;
+                    padding:.8rem;
+                    border: 1px solid lightgray;
+                }
+            }
+            &.button{
+                text-align:center;
+                a{
+                    display:inline-block;
+                    text-decoration:none;
+                    background-color:#D9A868;
+                    color:#fff;
+                    padding:1.2rem 2.4rem;
+
+                }
+            }
+            &:last-child{
+                margin:0;
+            }
+        }
+    }
+    @media screen and (max-width:768px){
+        width:95%;
+    }
+}
+
+//footer
+@import "footer";
