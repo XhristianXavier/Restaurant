@@ -58,7 +58,7 @@ body {
       padding-left: 1rem; }
   .header .menu-header {
     position: fixed;
-    z-index: 20;
+    z-index: 40;
     background-color: #2c2c2c;
     width: 250px;
     height: 100vh;
@@ -84,45 +84,48 @@ body {
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 20;
+    z-index: 30;
     display: none; }
   .header .layer-menu-active {
     display: block; }
 
-.menu-header {
+.our-menu-header {
   background-color: #fff;
   padding: 2.5rem 0; }
-  .menu-header .container-menu-header {
+  .our-menu-header .container-our-menu-header {
     width: 90%;
     max-width: 1150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto; }
-    .menu-header .container-menu-header .logo {
+    .our-menu-header .container-our-menu-header .logo {
       font-family: 'Pacifico';
       color: #000;
       font-size: 1.4rem; }
     @media screen and (max-width: 768px) {
-      .menu-header .container-menu-header {
+      .our-menu-header .container-our-menu-header {
         display: none; } }
-  .menu-header .menu ul {
+  .our-menu-header .menu ul {
     list-style-type: none;
     display: flex; }
-    .menu-header .menu ul li {
+    .our-menu-header .menu ul li {
       font-size: 1.2rem; }
-      .menu-header .menu ul li a {
+      .our-menu-header .menu ul li a {
         padding: .8rem 1rem;
         color: gray;
         font-weight: 400;
         text-decoration: none; }
-      .menu-header .menu ul li:last-child a {
+      .our-menu-header .menu ul li:last-child a {
         padding: .8rem 2.5rem;
         background-color: #2f2f2f;
         color: #fff; }
-        .menu-header .menu ul li:last-child a:hover {
+        .our-menu-header .menu ul li:last-child a:hover {
           background-color: #585858;
           color: #fff; }
+  @media screen and (max-width: 768px) {
+    .our-menu-header {
+      display: none; } }
 
 .banner {
   background-image: url("../images/menu-banner.jpeg");
@@ -151,6 +154,7 @@ body {
       font-weight: 400; }
     @media screen and (max-width: 768px) {
       .banner .container-reservation-banner {
+        width: 20rem;
         top: 20%; }
         .banner .container-reservation-banner h1 {
           font-size: 3.5rem; }
@@ -188,6 +192,12 @@ body {
     flex-wrap: wrap; }
     .our-menu .list-our-menu .item-our-menu {
       flex: 0 0 calc(33.3% - 2.5rem); }
+    @media screen and (max-width: 1024px) {
+      .our-menu .list-our-menu .item-our-menu {
+        flex: 0 0 calc(50% - 2.5rem); } }
+    @media screen and (max-width: 768px) {
+      .our-menu .list-our-menu .item-our-menu {
+        flex: 0 0 100%; } }
   .our-menu .desc-item-our-menu {
     font-size: 1.5rem;
     padding-bottom: 1.5rem;
