@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Roboto',sans-serif;
+    background-color:#f3f3f3;
+}
+.container{
+    display:flex;       
+    width:90%;
+    max-width:1150px;
+    margin:0 auto;
+}
+
+//Header
+@import "header";
+.our-menu-header{
+    background-color: #fff;
+    padding: 2.5rem 0;
+    .container-our-menu-header{
+        width: 90%;
+        max-width: 1150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        .logo{
+            font-family: 'Pacifico';
+            color:#000;
+            font-size:1.4rem;
+        }
+        @media screen and (max-width:768px){
+            display:none;
+        }
+    }
+    .menu{
+        ul{
+            list-style-type: none;
+            display:flex;
+            li{
+                font-size:1.2rem;
+                a{
+                    padding:.8rem 1rem;
+                    color:gray;
+                    font-weight:400;
+                    text-decoration:none;
+                }
+                &:last-child{
+                    a{
+                        padding:.8rem 2.5rem;
+                        background-color:rgb(47, 47, 47);
+                        color:#fff;
+                        &:hover{
+                            background-color:rgb(88, 88, 88);
+                            color:#fff; 
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    @media screen and (max-width:768px){
+        display:none;
+    }
+}
+//banner
+.banner{
+    background-image:url('../images/gallery-banner.jpeg');
+    height:25rem;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+    background-position: 50% 50%;
+    .container-reservation-banner{
+        top: 25%;
+        position: absolute;
+        right: 50%;
+        transform: translate(50%, 0%);
+        text-align:center;
+        color:#fff;
+        width:35rem;
+        h1{
+            font-size:4.5rem;
+        }
+        .menu-banner{
+            font-size:3.5rem;
+            font-weight:400;
+        }
+        .description-menu-banner{
+            margin-top :2rem;
+            color:#fff;
+            line-height:1.5;
+            font-weight:400;
+
+        } 
+    @media screen and (max-width:768px){
+        width:20rem;
+        top:20%;
+        h1{
+            font-size:3.5rem;
+        }
+        p{
+            font-size:1rem;
+            font-weight:600;
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    height:100vh;
+}
+.layer-banner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .5;
+    background-color: #000;
+}
+}
+//Gallery
+.gallery{
+    margin-top:5rem;
+    margin-bottom:5rem;
+    .container-gallery{
+        max-width:1150px;
+        display:flex;
+        margin:0 auto;
+        width:90%; 
+        flex-wrap:wrap;
+        gap:1.5rem;
+        .box-gallery{
+        flex: 0 0 calc(33.3% - 1.5rem);
+        img{
+            width:100%;
+            height:350px;
+            object-fit:cover;
+         }
+        }
+        @media screen and (max-width:1024px){
+        .box-gallery{
+            flex: 0 0 calc(50% - 1.5rem);  
+        }
+        }
+        @media screen and (max-width:768px){
+            .box-gallery{
+                flex: 0 0 100%;  
+            }
+            }
+    }
+}
+
+//footer
+@import "footer";

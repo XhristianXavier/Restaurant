@@ -1,0 +1,220 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Roboto',sans-serif;
+    background-color:#fff;
+}
+.container{
+    display:flex;       
+    width:90%;
+    max-width:1150px;
+    margin:0 auto;
+}
+
+//Header
+@import "header";
+.our-menu-header{
+    padding: 2.5rem 0;
+    .container-our-menu-header{
+        width: 90%;
+        max-width: 1150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        .logo{
+            font-family: 'Pacifico';
+            color:#000;
+            font-size:1.4rem;
+        }
+        @media screen and (max-width:768px){
+            display:none;
+        }
+    }
+    .menu{
+        ul{
+            list-style-type: none;
+            display:flex;
+            li{
+                font-size:1.2rem;
+                a{
+                    padding:.8rem 1rem;
+                    color:gray;
+                    font-weight:400;
+                    text-decoration:none;
+                }
+                &:last-child{
+                    a{
+                        padding:.8rem 2.5rem;
+                        background-color:rgb(47, 47, 47);
+                        color:#fff;
+                        &:hover{
+                            background-color:rgb(88, 88, 88);
+                            color:#fff; 
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    @media screen and (max-width:768px){
+        display:none;
+    }
+}
+//banner
+.banner{
+    background-image:url('../images/contact-banner.jpeg');
+    height:25rem;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+    background-position: 50% 50%;
+    .container-reservation-banner{
+        top: 25%;
+        position: absolute;
+        right: 50%;
+        transform: translate(50%, 0%);
+        text-align:center;
+        color:#fff;
+        width:35rem;
+        h1{
+            font-size:4.5rem;
+        }
+        .menu-banner{
+            font-size:3.5rem;
+            font-weight:400;
+        }
+        .description-menu-banner{
+            margin-top :2rem;
+            color:#fff;
+            line-height:1.5;
+            font-weight:400;
+
+        } 
+    @media screen and (max-width:768px){
+        width:20rem;
+        top:20%;
+        h1{
+            font-size:3.5rem;
+        }
+        p{
+            font-size:1rem;
+            font-weight:600;
+        }
+    }
+} 
+@media screen and (max-width:1024px){
+    height:100vh;
+}
+.layer-banner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .5;
+    background-color: #000;
+}
+}
+//Contact
+.contact{
+    margin:7rem 0;
+    .container-contact{
+        max-width:1150px;
+        width:90%;
+        margin:0 auto;
+        display:flex;
+        gap:1.5rem;
+        flex-wrap:wrap;
+        .contact-info{
+            flex: 0 0 calc(50% - 1.5rem);
+            .title-contact-info{
+                margin-bottom:1rem;
+            }
+            .description-contact-info{
+                line-height:1.5;
+                color:gray;
+            }
+            .hour-contact-info{
+                display:flex;
+                flex-wrap:wrap;
+                gap:1.5rem;
+                margin-top:3rem;
+                .item-hour-contact-info{
+                    flex: 0 0 calc(50% - 1.5rem);
+                    color:gray;
+                    .open-hour{
+                        .lunch,
+                        .dinner-1,
+                        .dinner-2{
+                            display:flex;
+                            justify-content:space-between;
+                            margin-bottom:1rem;
+                        }
+                    }
+                    .icon{
+                        color:#DABC95;
+                        font-size:1.2rem;
+                        margin-bottom:1rem;
+                    }
+                    .title{
+                        color:#000;
+                        margin-bottom:1rem;
+                        font-weight:600;
+                        font-size:1.2rem;
+                    }
+                }
+            }
+        @media screen and (max-width:768px){
+            flex: 0 0 100%;
+        }
+        }
+        .contact-form{
+            flex: 0 0 calc(50% - 1.5rem);
+            box-shadow: 0px 2px 17px -5px rgba(192,192,192,0.75);
+            padding:3.5rem 2rem 5rem 2rem;
+            .title-contact-form{
+                margin-bottom:1rem;
+            }
+            .description-contact-form{
+                margin-bottom:2rem;
+                color:gray;
+            }
+            .field{
+                margin-bottom:1.5rem;
+                input[type="text"],input[type="email"]{
+                    width: 100%;
+                    padding:.8rem 0;
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    outline:none;
+                    font-size: 1rem;
+                }
+                &:nth-of-type(3){
+                    margin-bottom:3rem;
+                }
+            }
+            .submit{
+                input[type="submit"]{
+                    padding: 1rem 3rem;
+                    background-color: rgb(170, 132, 83);
+                    border: aliceblue;
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                }
+            }
+            @media screen and (max-width:768px){
+                flex: 0 0 100%;
+            }
+        }
+    }
+}
+//Map
+.map{
+    background-image:url('../images/map.jpg');
+    height:25rem;
+}
+//footer
+@import "footer";
