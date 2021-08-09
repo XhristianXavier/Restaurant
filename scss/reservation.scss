@@ -213,6 +213,40 @@ body{
         width:95%;
     }
 }
+//Lunch hours
+.lunch-hours{
+    background-color:rgb(245, 245, 245);
+    padding-top:5.5rem;
+    padding-bottom:5.5rem;
+    .container-lunch-hours{
+        width:90%;
+        max-width:1150px;
+        margin:0 auto;
+        display:flex;
+        justify-content:space-between;
+        font-size:1.4rem;
+        font-weight:600;
+        .item-hour{
+            display:flex;
+            flex-direction:column;
+            text-align:center;
+            .hour{
+                margin-bottom:1rem;
+            }
+            .frecuently{
+                color:gray;
+                font-size:1rem;
+                font-weight:400;
+            }
+        }
+        @media screen and (max-width:768px){
+            flex-direction:column;
+            gap:3.5rem;
+        }
+    }
+
+}
+
 
 //footer
 @import "footer";

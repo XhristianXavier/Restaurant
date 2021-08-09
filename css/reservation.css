@@ -246,6 +246,33 @@ body {
     .container-reservation {
       width: 95%; } }
 
+.lunch-hours {
+  background-color: whitesmoke;
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem; }
+  .lunch-hours .container-lunch-hours {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: 600; }
+    .lunch-hours .container-lunch-hours .item-hour {
+      display: flex;
+      flex-direction: column;
+      text-align: center; }
+      .lunch-hours .container-lunch-hours .item-hour .hour {
+        margin-bottom: 1rem; }
+      .lunch-hours .container-lunch-hours .item-hour .frecuently {
+        color: gray;
+        font-size: 1rem;
+        font-weight: 400; }
+    @media screen and (max-width: 768px) {
+      .lunch-hours .container-lunch-hours {
+        flex-direction: column;
+        gap: 3.5rem; } }
+
 .footer {
   background-color: #3A424E; }
   .footer .container {

@@ -490,13 +490,16 @@ body{
             margin-bottom:2rem;
             flex-wrap:wrap;
             .field{
-                flex:1 0 auto;
+                flex:1 0 calc(33.3% - 2rem);
                 input[type="text"]{
                     width:100%;
                     outline:none;
                     padding:.8rem;
                     border: 1px solid lightgray;
                 }
+            @media screen and (max-width:768px){
+                flex: 1 0 100%;
+            }
             }
             &.button{
                 text-align:center;

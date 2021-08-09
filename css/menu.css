@@ -292,12 +292,15 @@ body {
       margin-bottom: 2rem;
       flex-wrap: wrap; }
       .container-reservation .form-reservation .row-form .field {
-        flex: 1 0 auto; }
+        flex: 1 0 calc(33.3% - 2rem); }
         .container-reservation .form-reservation .row-form .field input[type="text"] {
           width: 100%;
           outline: none;
           padding: .8rem;
           border: 1px solid lightgray; }
+        @media screen and (max-width: 768px) {
+          .container-reservation .form-reservation .row-form .field {
+            flex: 1 0 100%; } }
       .container-reservation .form-reservation .row-form.button {
         text-align: center; }
         .container-reservation .form-reservation .row-form.button a {
