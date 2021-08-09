@@ -112,6 +112,14 @@
                 margin-bottom:1rem;
                 color:#EFEFEF;
             }
+            .lunch,.first-dinner,.second-dinner{
+                display:flex;
+                justify-content:space-between;
+                .frecuently{
+                    text-align:center;
+                    color:gray;
+                }
+            }
         }
     }
     .copyright{

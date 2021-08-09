@@ -588,6 +588,12 @@ body {
       .footer .container .contact-info-footer .second-dinner {
         margin-bottom: 1rem;
         color: #EFEFEF; }
+      .footer .container .contact-info-footer .lunch, .footer .container .contact-info-footer .first-dinner, .footer .container .contact-info-footer .second-dinner {
+        display: flex;
+        justify-content: space-between; }
+        .footer .container .contact-info-footer .lunch .frecuently, .footer .container .contact-info-footer .first-dinner .frecuently, .footer .container .contact-info-footer .second-dinner .frecuently {
+          text-align: center;
+          color: gray; }
   .footer .copyright {
     border-top: 1px solid #585858;
     padding: 1.5rem 0;
